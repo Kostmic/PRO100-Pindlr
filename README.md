@@ -5,5 +5,5 @@ Prosjektet er laget av en gruppe bestående av 6 studenter:
 2. Eirik Andreas
 3. Erik Magnus Eriksen Olseng
 4. Eskild Tangen
-5. Michael Kosther
+5. Michael Kosther (Kostmic)
 6. Lars Hornes
