@@ -1,0 +1,4575 @@
+/*------------------------------------------------
+> > > TABLE OF CONTENTS:
+--------------------------------------------------
+1.0 - Oppsett
+2.0 - Header / Logo / Hjemknapp
+3.0 - Footer / Navigasjonsmeny
+4.0 - Side 1 og 2 - "Logo-splash" + Startside
+5.0 - Side 3 - "Tre steg til kjærligheten
+    5.1 - Side 3.0 - "Hovedsi 5.2 - Generelt for Side 3.2, 3.3 og 3.4
+    5.3 - Side 3.1 - "Første steg"
+    5.4 - Side 3.2 - "Andre steg"
+    5.5 - Side 3.3 - "Tredje steg"
+6.0 - Side 4 - "Pindlrs Liste
+7.0 - Side 5 - "Anbefalinger"
+8.0 - Side 6 - "Om oss"
+9.0 - Side 7 - "Call to action" / App-nedlasting
+------------------------------------------------*/
+
+/*------------------------------------------------
+1.0 - Oppsett
+------------------------------------------------*/
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
+
+body {
+	margin: 0;
+    padding: 0;
+    background-color: #ec407a;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+	font-family: 'Roboto Slab', serif;
+}
+
+.main-wrapper {
+    margin: auto;
+    position: relative;
+    top: -10px;
+    width: 960px;
+    height: 100%;
+}
+
+.title-wrapper {
+    margin: auto;
+    height: 60px;
+	padding-bottom: 5px;
+    color: #101010;
+    font-size: 50px;
+    text-align: center;
+}
+
+.title-text {
+    margin: auto;
+    text-align: center;
+    font-family: 'Roboto Slab', serif;
+}
+
+.title-text h1 {
+	font-size: 40px;
+	color: #ffffff;
+}
+
+.animate-title-text {
+    opacity: 0;
+    animation: titleAnimation 1.5s ease 7.5s forwards;
+}
+
+#scene {
+    position: relative;
+    width: 960px;
+    height: 550px;
+}
+
+#bg-fade {
+	position: absolute;
+	top: -20px;
+	left: 0;
+	right: 0;
+	margin: auto;
+	width: 960px;
+	height: 480px;
+	background-image: url(images/bg-fade.png);
+	opacity: 0.1;
+}
+
+@keyframes titleAnimation {
+    0% {
+        opacity: 0;
+        transform: translateX(-250px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+/*------------------------------------------------
+2.0 - Header / Logo / Hjemknapp
+------------------------------------------------*/
+header {
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+}
+
+#animated-header {
+    animation: splashHeader 9s ease forwards;
+}
+
+#logo-container {
+    position: absolute;
+    padding-top: 10px;
+    left: 0%;
+    height: 70px;
+    width: 100%;
+}
+
+#logo-icon {
+    position: relative;
+    display: inline-block;
+    height: 60px;
+}
+
+.logo-icon-animation {
+    animation: splashIcon 9s ease forwards;
+}
+
+#logo-text {
+    position: relative;
+    display: inline-block;
+    height: 60px;
+}
+
+.logo-text-animation {
+    animation: splashText 9s ease forwards;
+}
+
+@keyframes splashHeader {
+    0% {
+        height: 2000px;
+    }
+    40% {
+        height: 2000px;
+    }
+    100% {
+        height: 80px;
+    }
+}
+
+@keyframes splashIcon {
+    0% {
+        top: 200px;
+        left: 290px;
+        height: 240px;
+        opacity: 0;
+    }
+    20% {
+        top: 200px;
+        left: 290px;
+        height: 240px;
+        opacity: 1;
+    }
+    40% {
+        left: 0px;
+        top: 200px;
+        height: 240px;
+    }
+    60% {
+        left: 0px;
+        top: 200px;
+        height: 240px;
+    }
+    100% {
+        top: 0px;
+        left: 0px;
+    }
+}
+
+@keyframes splashText {
+    0% {
+        top: 440px;
+        left: -120px;
+        height: 240px;
+        opacity: 0;
+    }
+    20% {
+        top: 440px;
+        left: -120px;
+        height: 240px;
+        opacity: 1;
+    }
+    40% {
+        top: 440px;
+        left: 0px;
+        height: 240px;
+    }
+    60% {
+        top: 200px;
+        left: 0px;
+        height: 240px;
+    }
+    100% {
+        top: 0px;
+        left: 0px;
+        height: 60px;
+    }
+}
+
+/*------------------------------------------------
+3.0 - Footer / Navigasjonsmeny
+------------------------------------------------*/
+footer {
+    position: fixed;
+    bottom: 0;
+    height: 140px;
+    width: 100%;
+    background-color: #ffffff;
+    color: #101010;
+    filter: drop-shadow(0px -4px 4px rgba(0, 0, 0, 0.1));
+}
+
+#animated-footer {
+    animation: splashFooter 9s ease forwards;
+}
+
+#animated-footer-2 {
+	animation: footerRemove 5s linear forwards;
+}
+
+@keyframes footerRemove {
+	0% {
+		bottom: 0px;
+
+	 }
+	100% {
+		bottom: -1000px;
+	}
+}
+
+#navbar {
+    position: relative;
+    margin: auto;
+    padding-top: 15px;
+    left: 0;
+    right: 0;
+    height: 140px;
+    width: 960px;
+    color: #666666;
+}
+
+#navbar-line {
+    position: relative;
+    margin: 0 auto;
+    z-index: 5;
+    top: 50px;
+    left: 0;
+    right: 0;
+    height: 12px;
+    width: 960px;
+    background: linear-gradient(to right, rgba(255,202,40,0) 0%,rgba(255,202,40,1) 6%,rgba(255,202,40,1) 94%,rgba(255,202,40,0) 100%);
+}
+
+.navbar-dots {
+    position: absolute;
+    z-index: 6;
+    top: -14px;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    border: 8px solid #ffca28;
+}
+
+#navbar-dot-1 {
+    left: 70px;
+    background-color: #ffffff;
+}
+
+#navbar-dot-1-active {
+	left: 70px;
+    background-color: #ffca28;
+}
+
+#navbar-dot-2 {
+    left: 260px;
+    background-color: #ffffff;
+}
+
+#navbar-dot-2-active {
+	left: 260px;
+    background-color: #ffca28;
+}
+
+#navbar-dot-3 {
+    left: 460px;
+    background-color: #ffffff;
+}
+
+#navbar-dot-3-active {
+	left: 460px;
+    background-color: #ffca28;
+}
+
+#navbar-dot-4 {
+    left: 650px;
+    background-color: #ffffff;
+}
+
+#navbar-dot-4-active {
+	left: 650px;
+    background-color: #ffca28;
+}
+
+#navbar-dot-5 {
+    left: 850px;
+    background-color: #ffffff;
+}
+
+#navbar-dot-5-active {
+	left: 850px;
+    background-color: #ffca28;
+}
+
+.link-dot {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    z-index: 100;
+    transition: .2s ease;
+}
+
+.link-dot:hover {
+    background-color: #ffca28;
+}
+
+.navbar-names {
+    position: relative;
+    left: -43px;
+    height: 16px;
+    width: 110px;
+    text-align: center;
+    line-height: 16px;
+}
+
+.navbar-above {
+    top: -32px;
+}
+
+.navbar-below {
+    top: 42px;
+}
+
+@keyframes splashFooter {
+    0% {
+        height: 0px;
+    }
+    80% {
+        height: 0px;
+    }
+    100% {
+        height: 140px;
+    }
+}
+
+/*------------------------------------------------
+4.0. - Side 1 og 2 - "Logo-splash" + Startside
+------------------------------------------------*/
+#start-track {
+    position: absolute;
+    top: 185px;
+    left: -750px;
+    height: 12px;
+    width: 2500px;
+    background-color: #dddddd;
+    z-index: 1;
+}
+
+#start-scene-track {
+    position: absolute;
+    margin: 0 auto;
+    z-index: 6;
+    top: 185px;
+    left: 0;
+    right: 0;
+    height:12px;
+    width: 960px;
+   	background-color: #29b6f6;
+}
+
+.start-track-dots {
+    position: absolute;
+    z-index: 15;
+    top: -14px;
+    width: 25px;
+    height: 25px;
+    background-color: #ffffff;
+    border: 8px solid #29b6f6;
+    border-radius: 50%;
+}
+
+#start-track-dot-1 {
+    left: 40px;
+}
+
+#start-track-dot-2 {
+    left: 460px;
+}
+
+#start-track-dot-3 {
+    right: 40px;
+}
+
+.start-track-small-dots {
+    position: absolute;
+    z-index: 10;
+    top: 176px;
+    width: 20px;
+    height: 20px;
+    background-color: #ffffff;
+    border: 5px solid #29b6f6; /* BLUE */
+    border-radius: 50%;
+}
+
+#start-track-small-dot-1 {
+    left: 240px;
+}
+
+#start-track-small-dot-2 {
+    left: 700px;
+}
+
+#start-subway {
+    position: absolute;
+    z-index: 100;
+    top: 174px;
+    height: 35px;
+    width: 200px;
+    opacity: 0;
+    background-image: url(images/subway-horizontal.png);
+    border-radius: 5px;
+    animation: startTrainMove 14s ease-in-out 9s infinite;
+}
+
+#start-track-center {
+    position: absolute;
+    top: 50%;
+    height: 12px;
+    width: 100%;
+    background-color: #ff00cc;
+    z-index: 5;
+}
+
+#track-bend-1 {
+    position: absolute;
+    top: 255px;
+    left: 448px;
+    height: 12px;
+    width: 200px;
+    background-color: #dddddd;
+    border-bottom-right-radius: 50px 30px;
+    transform: rotate(-315deg);
+}
+
+#track-bend-2 {
+    position: absolute;
+    top: 320px;
+    left:602px;
+    height: 12px;
+    width: 350px;
+    background-color: #dddddd;
+    border-bottom-left-radius: 50px 30px;
+}
+
+#track-bend-dot {
+    position: absolute;
+    z-index: 15;
+    top: 304px;
+    right: 40px;
+    width: 25px;
+    height: 25px;
+    background-color: #ffffff;
+    border: 8px solid #dddddd;
+    border-radius: 50%;
+}
+
+#track-bend-dot-small {
+    position: absolute;
+    z-index: 15;
+    top: 311px;
+    left: 700px;
+    width: 20px;
+    height: 20px;
+    background-color: #ffffff;
+    border: 5px solid #dddddd;
+    border-radius: 50%;
+}
+
+#start-continue {
+    margin: auto;
+    top: 550px;
+    left: 0;
+    right: 0;
+}
+
+.white-bubble {
+    position: absolute;
+    padding: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+
+.white-bubble img {
+    width: 50px;
+    height: 50px;
+    animation: bubbleWobble .5s ease infinite;
+}
+
+.bubble-wobble {
+    position: absolute;
+    left: 25px;
+    animation: bubbleWobble 1s ease infinite;
+}
+
+#white-bubble-wave {
+    top: 40px;
+    left: 10px;
+    opacity: 0;
+    animation: bubbleWaveFade 14s ease 9s infinite;
+}
+
+#white-bubble-talk {
+    top: 40px;
+    left: 428px;
+    opacity: 0;
+    animation: bubbleTalkFade 14s ease 9s infinite;
+}
+
+#white-bubble-heart {
+    top: 40px;
+    left: 846px;
+    opacity: 0;
+    animation: bubbleHeartFade 14s ease 9s infinite;
+}
+
+/** BUTTONS **/
+
+.button {
+    position: absolute;
+    z-index: 200;
+    width: 150px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 5px;
+    background-color: #29b6f6;
+    transition: 2s ease;
+}
+
+.button:hover {
+    background-color: #81d4fa;
+}
+
+.button a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 20px;
+    text-align: center;
+}
+
+.button-link {
+	font-family: 'Roboto Slab', serif;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	padding-left: 40px;
+	padding-right: 40px;
+}
+
+#center-button {
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 410px;
+}
+
+#center-button-about {
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom: 173px;
+}
+
+/** KEYFRAMES **/
+
+@keyframes bubbleWobble {
+    0% {
+        top: 20px;
+    }
+    50% {
+        top: 30px;
+    }
+    100% {
+        top: 20px;
+    }
+}
+
+@keyframes bubbleWaveFade {
+    0% {
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    20% {
+        opacity: 1;
+    }
+    30% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes bubbleTalkFade {
+    0% {
+        opacity: 0;
+    }
+    30% {
+        opacity: 0;
+    }
+    40% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+    }
+    60% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes bubbleHeartFade {
+    0% {
+        opacity: 0;
+    }
+    30% {
+        opacity: 0;
+    }
+    40% {
+        opacity: 0;
+    }
+    55% {
+        opacity: 0;
+    }
+    60% {
+        opacity: 0;
+    }
+    70% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes startTrainMove {
+    0% {
+        opacity: 0;
+        left: -247px;
+    }
+    10% {
+        opacity: 1;
+        left: -37px;
+    }
+    20% {
+        left: -37px;
+    }
+    40% {
+        left: 383px;
+    }
+    50% {
+        left: 383px;
+    }
+    70% {
+        left: 802px;
+    }
+    80% {
+        opacity: 1;
+        left: 802px;
+    }
+    100% {
+        opacity: 0;
+        left: 1012px;
+    }
+}
+
+/*------------------------------------------------
+5.0 - Side 3 - "Tre steg til kjærligheten"
+------------------------------------------------*/
+.expanding-container {
+    margin: auto;
+    position: fixed;
+    z-index: 600;
+    top: 80px;
+    left: 0;
+    right: 0;
+    width: 960px;
+    height: 100%;
+    overflow: hidden;
+    opacity: 1;
+    background-color: #f0f0f0;
+}
+
+.three-steps-animation-container {
+    display: none;
+    margin: auto;
+    position: fixed;
+    z-index: 1000;
+    top: 120px;
+    left: 0;
+    right: 0;
+    width: 960px;
+    height: 550px;
+    overflow: hidden;
+    border-radius: 20px;
+    opacity: 1;
+    background-color: #f0f0f0;
+}
+
+.three-steps-animation-container:target {
+    display: inline;
+}
+
+#animation-one {
+    background: #388e3c;
+    animation: animationOneContainerExpand 9s ease forwards;
+}
+
+@keyframes animationOneContainerExpand {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    5% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    95% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0);
+    }
+}
+
+#animation-two {
+    background: #212121;
+    animation: animationTwoContainerExpand 25s ease forwards;
+}
+
+@keyframes animationTwoContainerExpand {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    5% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    95% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0);
+    }
+}
+
+#animation-three {
+    animation: animationThreeContainerExpand 19s ease forwards;
+}
+
+@keyframes animationThreeContainerExpand {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    5% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    95% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0);
+    }
+}
+
+/*------------------------------------------------
+5.1 - Side 3.0 - "Hovedside"
+------------------------------------------------*/
+.door-text {
+    font-size: 20px;
+    position: absolute;
+    opacity: 0;
+    z-index:200;
+    top: 180px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    border: 7px solid #ffffff;
+    text-align: center;
+    font-family: 'Roboto Slab', serif;
+}
+
+#door-text1 {
+    left: 130px;
+}
+
+#door-text2 {
+    right: 430px;
+}
+
+#door-text3 {
+    right: 130px;
+}
+
+#doorLink1:hover ~ #door-text1 {
+    animation: textInvis 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode:forwards;
+}
+
+#doorLink2:hover ~ #door-text2 {
+    animation: textInvis 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+#doorLink3:hover ~ #door-text3 {
+    animation: textInvis 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.heart-number {
+    top:5px;
+    left: 0px;
+    right: 0px;
+    font-size:30px;
+    position: absolute;
+    text-align: center;
+    color: #ec407a;
+    font-family: 'Roboto Slab', serif;
+}
+
+#howto-subway {
+    position: absolute;
+    width: 960px;
+    height: 180px;
+    background-image: url(images/subway.png);
+    z-index: 100;
+    animation: howtoSubwayMove 5s ease-out forwards;
+    top: 70px;
+}
+
+.door-link {
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    height: 153px;
+    width: 100px;
+    z-index: 104;
+}
+
+.howto-subway-doors-cont-1 {
+    position: absolute;
+    width: 100px;
+    height: 153px;
+    z-index: 102;
+    left: 130px;
+    top: 27px;
+    transition: 2s ease;
+}
+
+.howto-subway-doors-cont-1:hover {
+    width: 190px;
+    left: 85px;
+}
+
+.howto-subway-doors-cont-2 {
+    position: absolute;
+    width: 100px;
+    height: 153px;
+    z-index: 102;
+    left: 430px;
+    top: 27px;
+    transition: 2s ease;
+}
+
+.howto-subway-doors-cont-2:hover {
+    width: 190px;
+    left: 385px;
+}
+
+.howto-subway-doors-cont-3 {
+    position: absolute;
+    width: 100px;
+    height: 153px;
+    z-index: 102;
+    left: 730px;
+    top: 27px;
+    transition: 2s ease;
+}
+
+.howto-subway-doors-cont-3:hover {
+    width: 190px;
+    left: 685px;
+}
+
+.howto-subway-doors {
+    position: absolute;
+    width: 52px;
+    height: 153px;
+    z-index: 105;
+}
+
+#howto-subway-door-1-l {
+    left: 0;
+    background-image: url(images/door-left.png);
+}
+
+#howto-subway-door-1-r {
+    right: 0;
+    background-image: url(images/door-right.png);
+}
+
+#howto-subway-door-2-l {
+    left: 0;
+    background-image: url(images/door-left.png);
+}
+
+#howto-subway-door-2-r {
+    right: 0;
+    background-image: url(images/door-right.png);
+}
+
+#howto-subway-door-3-l {
+    left: 0;
+    background-image: url(images/door-left.png);
+}
+
+#howto-subway-door-3-r {
+    right: 0;
+    background-image: url(images/door-right.png);
+}
+
+#howto-subway-track {
+    position: absolute;
+    left: -1000px;
+    height: 10px;
+    width: 3000px;
+    top: 250px;
+    background-color: #757575;
+    z-index: 0;
+}
+
+#howto-station {
+    position: absolute;
+    top: 250px;
+    width: 720px;
+    border-bottom: 60px solid #bbbbbb;
+    border-left: 120px solid transparent;
+    border-right: 120px solid transparent;
+    border-radius: 20px;
+    height: 0;
+}
+
+.howto-hearts {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-image: url(images/heart-1.svg);
+    animation: howtoHeartMove 2s linear infinite;
+    z-index: 100;
+}
+
+#howto-heart-1 {
+    left: 155px;
+    z-index: 150;
+}
+
+#howto-heart-2 {
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+#howto-heart-3 {
+    left: 755px;
+}
+
+#howto-heart-container {
+    animation: howtoHeartFade 1s linear forwards;
+    animation-delay: 2s;
+    opacity: 0;
+    z-index: 100;
+}
+
+#howto-tunnel {
+    position: absolute;
+    top: 250px;
+    background-color: #999999;
+    background-image: linear-gradient(0deg, #999999 0%, #000000 100%);
+    border-top: #333 5px solid;
+    border-bottom: #000 5px solid;
+    width: 100%;
+    height: 240px;
+    z-index: 1;
+}
+
+@keyframes howtoHeartMove {
+    0% {
+        top:0px;
+    }
+    50% {
+        top: 10px;
+    }
+    100% {
+        top: 0px;
+    }
+}
+
+@keyframes howtoHeartFade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: .5;
+    }
+}
+
+@keyframes howtoSubwayMove {
+    0% {
+        left: -1060px;
+    }
+    100% {
+        left:0;
+    }
+}
+
+@keyframes textInvis {
+    from {}
+    to {opacity: 1;}
+}
+
+/*------------------------------------------------
+5.2 - Generelt for side 3.2, 3.3 og 3.4
+------------------------------------------------*/
+
+/*------------------------------------------------
+5.3 - Side 3.1 - "Første steg"
+------------------------------------------------*/
+#tbane-birdseye-view {
+    top: 180px;
+    left: 0;
+    right: 0;
+    height: 450px;
+    width: 700px;
+    position: absolute;
+    z-index: 1000;
+    margin: auto;
+}
+
+#tbane-perong {
+    position: absolute;
+    top: 490px;
+    width: 960px;
+    height: 159px;
+    background-color: #6b6a6a;
+    animation: anim1-railMoves 10s ease-in forwards;
+    animation-delay: 5s;
+}
+
+#anim1-personBlue {
+    background-color: #40c4ff;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    z-index: 1000;
+    display: block;
+    position: absolute;
+    bottom: 140px;
+    left: 38px;
+    animation: animPersonBlueMoves1 linear forwards 10s;
+}
+
+#anim1-personRed {
+    background-color: #ff4081;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    z-index: 1000;
+    display: block;
+    position: absolute;
+    bottom: 140px;
+    right: 38px;
+    animation: animPersonRedMoves1 linear forwards 10s;
+}
+
+#tbane-perrong-linje {
+    background-color: #d3c60e;
+    position: absolute;
+    width: 952px;
+    height: 20px;
+    right: 0px;
+    left: 4px;
+    outline: 5px groove #d3c60e;
+}
+
+#tbane-can {
+    background-color: #465060;
+    border-bottom-left-radius: 30%;
+    border-bottom-right-radius: 30%;
+    width: 40px;
+    height: 50px;
+    position: absolute;
+    bottom: 50px;
+    left: 5px;
+    transform: rotate(270deg);
+}
+
+#tbane-krakk {
+    background-color: #ba6844;
+    border-radius: 20%;
+    width: 160px;
+    height: 50px;
+    position: absolute;
+    transform: rotate(345deg);
+    bottom: 32px;
+    left: 700px;
+}
+
+#tbane-krakk1 {
+    background-color: #ba6844;
+    border-radius: 20%;
+    width: 160px;
+    height: 50px;
+    position: absolute;
+    transform: rotate(10deg);
+    bottom: 30px;
+    left: 100px;
+}
+
+#anim1-skinne-holder {
+    position: absolute;
+    width: 100%;
+    height: 150px;
+    top: 333px;
+    animation: anim1-railMoves ease-in 10s forwards;
+    animation-delay: 5s;
+}
+
+.anim1-skinne-properties {
+    position: absolute;
+    width: 20px;
+    height: 150px;
+    background-color: #4e342e;
+}
+
+#anim1-skinne-1 {
+    left: -300px;
+}
+
+#anim1-skinne-2 {
+    left: -250px;
+}
+
+#anim1-skinne-3 {
+    left: -200px;
+}
+
+#anim1-skinne-4 {
+    left: -150px;
+}
+
+#anim1-skinne-5 {
+    left: -100px;
+}
+
+#anim1-skinne-6 {
+	left: -50px;
+}
+
+#anim1-skinne-7 {
+    left: 0px;
+}
+
+#anim1-skinne-8 {
+    left: 50px;
+}
+
+#anim1-skinne-9 {
+    left: 100px;
+}
+
+#anim1-skinne-10 {
+    left: 150px;
+}
+
+#anim1-skinne-11 {
+    left: 200px;
+}
+
+#anim1-skinne-12 {
+    left: 250px;
+}
+
+#anim1-skinne-13 {
+    left: 300px;
+}
+
+#anim1-skinne-14 {
+    left: 350px;
+}
+
+#anim1-skinne-15 {
+    left: 400px;
+}
+
+#anim1-skinne-16 {
+    left: 450px;
+}
+
+#anim1-skinne-17 {
+    left: 500px;
+}
+
+#anim1-skinne-18 {
+    left: 550px;
+}
+
+#anim1-skinne-19 {
+    left: 600px;
+}
+
+#anim1-skinne-20 {
+    left: 650px;
+}
+
+#anim1-skinne-21 {
+    left: 700px;
+}
+
+#anim1-skinne-22 {
+    left: 750px;
+}
+
+#anim1-skinne-23 {
+    left: 800px;
+}
+
+#anim1-skinne-24 {
+    left: 850px;
+}
+
+#anim1-skinne-25 {
+    left: 900px;
+}
+
+#anim1-skinne-26 {
+    left: 950px;
+}
+
+#anim1-skinne-27 {
+    left: 1000px;
+}
+
+#anim1-skinne-28 {
+    left: 1050px;
+}
+
+#anim1-skinne-29 {
+    left: 1100px;
+}
+
+#anim1-skinne-30 {
+    left: 1150px;
+}
+
+#anim1-skinne-31 {
+    left: 1200px;
+}
+
+#anim1-skinne-32 {
+    left: 1250px;
+}
+
+#anim1-skinne-33 {
+    left: 1300px;
+}
+
+#anim1-skinne-34 {
+    left: 1350px;
+}
+
+#anim1-skinne-35 {
+    left: 1400px;
+}
+
+#anim1-skinne-36 {
+    left: 1450px;
+}
+
+#anim1-skinne-37 {
+    left: 1500px;
+}
+
+#anim1-skinne-38 {
+    left: 1550px;
+}
+
+#anim1-skinne-39 {
+    left: 1600px;
+}
+
+#anim1-skinne-40 {
+    left: 1650px;
+}
+
+#anim1-skinne-41 {
+    left: 1700px;
+}
+
+#anim1-skinne-42 {
+    left: 1750px;
+}
+
+#anim1-skinne-43 {
+    left: 1800px;
+}
+
+#anim1-skinne-44 {
+    left: 1850px;
+}
+
+#anim1-skinne-45 {
+    left: 1900px;
+}
+
+#anim1-skinne-46 {
+    left: 1950px;
+}
+
+#anim1-skinne-47 {
+    left: 2000px;
+}
+
+#anim1-skinne-48 {
+    left: 2050px;
+}
+
+#anim1-skinne-49 {
+    left: 2100px;
+}
+
+#anim1-skinne-50 {
+    left: 2150px;
+}
+
+#anim1-skinne-51 {
+    left: 2200px;
+}
+
+#anim1-skinne-52 {
+    left: 2250px;
+}
+
+#anim1-skinne-53 {
+    left: 2300px;
+}
+
+#anim1-skinne-54 {
+    left: 2350px;
+}
+
+#anim1-skinne-55 {
+    left: 2400px;
+}
+
+#anim1-skinne-56 {
+    left: 2450px;
+}
+
+#anim1-skinne-57 {
+    left: 2500px;
+}
+
+#anim1-skinne-58 {
+    left: 2550px;
+}
+
+#anim1-skinne-59 {
+    left: 2600px;
+}
+
+#anim1-skinne-60 {
+    left: 2650px;
+}
+
+#anim1-skinne-61 {
+    left: 2700px;
+}
+
+#anim1-skinne-62 {
+    left: 2750px;
+}
+
+#anim1-skinne-63 {
+    left: 2800px;
+}
+
+#anim1-skinne-64 {
+    left: 2850px;
+}
+
+#anim1-skinne-65 {
+    left: 2900px;
+}
+
+#anim1-skinne-66 {
+    left: 2950px;
+}
+
+#anim1-skinne-67 {
+    left: 3000px;
+}
+
+#anim1-skinne-68 {
+    left: 3050px;
+}
+
+#anim1-skinne-69 {
+    left: 3100px;
+}
+
+#anim1-skinne-70 {
+    left: 3150px;
+}
+
+#anim1-skinne-71 {
+    left: 3200px;
+}
+
+#anim1-skinne-72 {
+    left: 3250px;
+}
+
+#anim1-skinne-73 {
+    left: 3300px;
+}
+
+#anim1-skinne-74 {
+    left: 3350px;
+}
+
+#anim1-skinne-75 {
+    left: 3400px;
+}
+
+#anim1-skinne-76 {
+    left: 3450px;
+}
+
+#anim1-skinne-77 {
+    left: 3500px;
+}
+
+#anim1-skinne-78 {
+    left: 3550px;
+}
+
+#anim1-skinne-79 {
+    left: 3600px;
+}
+
+#anim1-skinne-80 {
+    left: 3650px;
+}
+
+#anim1-skinne-81 {
+    left: 3700px;
+}
+
+#anim1-skinne-82 {
+    left: 3750px;
+}
+
+#anim1-skinne-83 {
+    left: 3800px;
+}
+
+#anim1-skinne-84 {
+    left: 3850px;
+}
+
+#anim1-skinne-85 {
+    left: 3900px;
+}
+
+#anim1-skinne-86 {
+    left: 3950px;
+}
+
+#anim1-skinne-87 {
+    left: 4000px;
+}
+
+#anim1-skinne-88 {
+    left: 4050px;
+}
+
+#anim1-skinne-89 {
+    left: 4100px;
+}
+
+#anim1-skinne-90 {
+    left: 4150px;
+}
+
+#anim1-skinne-91 {
+    left: 4200px;
+}
+
+#anim1-skinne-91 {
+    left: 4250px;
+}
+
+#anim1-skinne-92 {
+    left: 4300px;
+}
+
+#anim1-skinne-93 {
+    left: 4350px;
+}
+
+#anim1-skinne-94 {
+    left: 4400px;
+}
+
+#anim1-steel-line1 {
+    height: 15px;
+    width: 100%;
+    top: 353px;
+    left: 0px;
+    position: absolute;
+    z-index: 9;
+    background-color: #757575;
+}
+
+#anim1-steel-line2 {
+    height: 15px;
+    width: 100%;
+    top: 445px;
+    left: 0px;
+    position: absolute;
+    z-index: 9;
+    background-color: #757575;
+}
+
+#anim1-subway-move {
+    animation: anim1-railMoves 10s linear forwards;
+}
+
+@keyframes animPersonBlueMoves1 {
+    0% {
+        bottom: 8px;
+        left: 190px;
+    }
+    10% {
+        bottom: 8px;
+        left: 190px;
+    }
+    25% {
+        bottom: 10px;
+        left: 250px;
+    }
+    35% {
+        bottom: 45px;
+        left: 250px;
+    }
+    45% {
+        bottom: 100px;
+        left: 250px;
+    }
+    55% {
+        bottom: 100px;
+        left: 310px;
+    }
+    65% {
+        bottom: 70px;
+        left: 310px;
+    }
+    100% {
+        bottom: 70px;
+        left: 310px;
+    }
+}
+
+@keyframes animPersonRedMoves1 {
+    0% {
+        bottom: 8px;
+        right: 190px;
+    }
+    10% {
+        bottom: 8px;
+        right: 190px;
+    }
+    25% {
+        bottom: 10px;
+        right: 250px;
+    }
+    35% {
+        bottom: 45px;
+        right: 250px;
+    }
+    45% {
+        bottom: 120px;
+        right: 250px;
+    }
+    50% {
+        bottom: 150px;
+        right: 250px;
+    }
+    60% {
+        bottom: 150px;
+        right: 185px;
+    }
+    65% {
+        bottom: 195px;
+        right: 185px;
+    }
+    100% {
+        bottom: 195px;
+        right: 185px;
+    }
+}
+/*------------------------------------------------
+5.4 - Side 3.2 - "Andre steg"
+------------------------------------------------*/
+#anim2-tbane-birdseye-view {
+    position: absolute;
+    width: 700px;
+    height: 450px;
+    z-index: 1;
+    left: 0px;
+    right: 0px;
+    margin: auto;
+}
+
+#anim2-personBlue {
+    background-color: #40c4ff;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    z-index: 2;
+    display: block;
+    position: absolute;
+    bottom: 250px;
+    left: 310px;
+    animation: animPersonBlueMoves2 forwards 30s;
+}
+
+#anim2-personRed {
+    background-color: #ff4081;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    z-index: 2;
+    display: block;
+    position: absolute;
+    bottom: 380px;
+    left: 750px;
+    animation: animPersonRedMoves2 forwards 30s;
+}
+
+#dots-bubble{
+    position: relative;
+    top: -16px;
+    left: -8px;
+    width: 33px;
+    height: 33px;
+    animation: chatFloat 2s infinite;
+    transform: translate(0,5px)
+}
+
+.speech-bubble {
+    background: #efefef;
+    border-radius: 15px;
+    font-size: 1.2rem;
+    line-height: 1.3;
+    margin: 0 auto 40px;
+    width: 15px;
+    height: 10px;
+    padding: 15px;
+    position: absolute;
+    opacity: 0;
+    z-index: 5;
+}
+
+.speech-bubble p {
+    margin: 0 0 10px;
+}
+
+.speech-bubble p:last-of-type {
+    margin-bottom: 0;
+}
+
+#chat {
+    position: absolute;
+    animation: chatFloat 2s linear infinite;
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    right: 7px;
+    bottom: -7px;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #efefef;
+    position: absolute;
+}
+
+#speech-bubble1 {
+    right: 620px;
+    bottom: 240px;
+    position: absolute;
+    animation: subwayBubblemove2 11s forwards;
+}
+
+#speech-bubble2 {
+    right: 600px;
+    bottom: 290px;
+    position: absolute;
+    animation: subwayBubblemove3 15s forwards;
+}
+
+#speech-bubble3 {
+    right: 458px;
+    bottom: 290px;
+    position: absolute;
+    animation: subwayBubblemove5 24s forwards;
+}
+
+#speech-bubble4 {
+    right: 186px;
+    bottom: 290px;
+    position: absolute;
+    animation: subwayBubblemove4 13s forwards;
+}
+
+#speech-bubble5 {
+    left: 730px;
+    bottom: 370px;
+    position: absolute;
+    animation: subwayBubblemove1 11s forwards;
+}
+
+#phone-shake1 {
+    top: 6px;
+    right: 6px;
+    position: absolute;
+    width: 31px;
+    height: 31px;
+}
+
+#phone-shake2 {
+    top: 7px;
+    right: 8px;
+    position: absolute;
+    width: 31px;
+    height: 31px;
+}
+
+.phone-shake {
+    animation: phoneShake 0.1s linear infinite;
+    position: absolute;
+}
+
+#wave-shake1 {
+    top: 6px;
+    right: 12px;
+    position: absolute;
+    width: 25px;
+    height: 25px;
+}
+
+#wave-shake2 {
+    top: 6px;
+    right: 12px;
+    position: absolute;
+    width: 25px;
+    height: 25px;
+}
+
+.wave-shake {
+    animation: waveShake 0.7s linear infinite;
+    position:absolute;
+}
+
+#anim2-skinne-holder {
+    position: absolute;
+    height: 300px;
+    left: 0;
+    animation: anim2SkinneMoves 20s linear infinite;
+}
+
+.anim2-skinne-properties {
+    position: absolute;
+    width: 20px;
+    height: 150px;
+    top: 150px;
+    background-color: #ae4d15;
+    z-index: -501;
+}
+
+#anim2-skinne-1 {
+    left: -300px;
+}
+
+#anim2-skinne-2 {
+    left: -250px;
+}
+
+#anim2-skinne-3 {
+    left: -200px;
+}
+
+
+#anim2-skinne-4 {
+    left: -150px;
+}
+
+#anim2-skinne-5 {
+    left: -100px;
+}
+
+#anim2-skinne-6 {
+    left: -50px;
+}
+
+#anim2-skinne-7 {
+    left: 0px;
+}
+
+#anim2-skinne-8 {
+    left: 50px;
+}
+
+#anim2-skinne-9 {
+    left: 100px;
+}
+
+#anim2-skinne-10 {
+    left: 150px;
+}
+
+#anim2-skinne-11 {
+    left: 200px;
+}
+
+#anim2-skinne-12 {
+    left: 250px;
+}
+
+#anim2-skinne-13 {
+    left: 300px;
+}
+
+#anim2-skinne-14 {
+    left: 350px;
+}
+
+#anim2-skinne-15 {
+    left: 400px;
+}
+
+#anim2-skinne-16 {
+    left: 450px;
+}
+
+#anim2-skinne-17 {
+    left: 500px;
+}
+
+#anim2-skinne-18 {
+    left: 550px;
+}
+
+#anim2-skinne-19 {
+    left: 600px;
+}
+
+#anim2-skinne-20 {
+    left: 650px;
+}
+
+#anim2-skinne-21 {
+    left: 700px;
+}
+
+#anim2-skinne-22 {
+    left: 750px;
+}
+
+#anim2-skinne-23 {
+    left: 800px;
+}
+
+#anim2-skinne-24 {
+    left: 850px;
+}
+
+#anim2-skinne-25 {
+    left: 900px;
+}
+
+#anim2-skinne-26 {
+    left: 950px;
+}
+
+#anim2-skinne-27 {
+    left: 1000px;
+}
+
+#anim2-skinne-28 {
+    left: 1050px;
+}
+
+#anim2-skinne-29 {
+    left: 1100px;
+}
+
+#anim2-skinne-30 {
+    left: 1150px;
+}
+
+#anim2-skinne-31 {
+    left: 1200px;
+}
+
+#anim2-skinne-32 {
+    left: 1250px;
+}
+
+#anim2-skinne-33 {
+    left: 1300px;
+}
+
+#anim2-skinne-34 {
+    left: 1350px;
+}
+
+#anim2-skinne-35 {
+    left: 1400px;
+}
+
+#anim2-skinne-36 {
+    left: 1450px;
+}
+
+#anim2-skinne-37 {
+    left: 1500px;
+}
+
+#anim2-skinne-38 {
+    left: 1550px;
+}
+
+#anim2-skinne-39 {
+    left: 1600px;
+}
+
+#anim2-skinne-40 {
+    left: 1650px;
+}
+
+#anim2-skinne-41 {
+    left: 1700px;
+}
+
+#anim2-skinne-42 {
+    left: 1750px;
+}
+
+#anim2-skinne-43 {
+    left: 1800px;
+}
+
+#anim2-skinne-44 {
+    left: 1850px;
+}
+
+#anim2-skinne-45 {
+    left: 1900px;
+}
+
+#anim2-skinne-46 {
+    left: 1950px;
+}
+
+#anim2-skinne-47 {
+    left: 2000px;
+}
+
+#anim2-skinne-48 {
+    left: 2050px;
+}
+
+#anim2-skinne-49 {
+    left: 2100px;
+}
+
+#anim2-skinne-50 {
+    left: 2150px;
+}
+
+#anim2-skinne-51 {
+    left: 2200px;
+}
+
+#anim2-skinne-52 {
+    left: 2250px;
+}
+
+#anim2-skinne-53 {
+    left: 2300px;
+}
+
+#anim2-skinne-54 {
+    left: 2350px;
+}
+
+#anim2-skinne-55 {
+    left: 2400px;
+}
+
+#anim2-skinne-56 {
+    left: 2450px;
+}
+
+#anim2-skinne-57 {
+    left: 2500px;
+}
+
+#anim2-skinne-58 {
+    left: 2550px;
+}
+
+#anim2-skinne-59 {
+    left: 2600px;
+}
+
+#anim2-skinne-60 {
+    left: 2650px;
+}
+
+#anim2-skinne-61 {
+    left: 2700px;
+}
+
+#anim2-skinne-62 {
+    left: 2750px;
+}
+
+#anim2-skinne-63 {
+    left: 2800px;
+}
+
+#anim2-skinne-64 {
+    left: 2850px;
+}
+
+#anim2-skinne-65 {
+    left: 2900px;
+}
+
+#anim2-skinne-66 {
+    left: 2950px;
+}
+
+#anim2-skinne-67 {
+    left: 3000px;
+}
+
+#anim2-skinne-68 {
+    left: 3050px;
+}
+
+#anim2-skinne-69 {
+    left: 3100px;
+}
+
+#anim2-skinne-70 {
+    left: 3150px;
+}
+
+#anim2-skinne-71 {
+    left: 3200px;
+}
+
+#anim2-skinne-72 {
+    left: 3250px;
+}
+
+#anim2-skinne-73 {
+    left: 3300px;
+}
+
+#anim2-skinne-74 {
+    left: 3350px;
+}
+
+#anim2-skinne-75 {
+    left: 3400px;
+}
+
+#anim2-skinne-76 {
+    left: 3450px;
+}
+
+#anim2-skinne-77 {
+    left: 3500px;
+}
+
+#anim2-skinne-78 {
+    left: 3550px;
+}
+
+#anim2-skinne-79 {
+    left: 3600px;
+}
+
+#anim2-skinne-80 {
+    left: 3650px;
+}
+
+#anim2-skinne-81 {
+    left: 3700px;
+}
+
+#anim2-skinne-82 {
+    left: 3750px;
+}
+
+#anim2-skinne-83 {
+    left: 3800px;
+}
+
+#anim2-skinne-84 {
+    left: 3850px;
+}
+
+#anim2-skinne-85 {
+    left: 3900px;
+}
+
+#anim2-skinne-86 {
+    left: 3950px;
+}
+
+#anim2-skinne-87 {
+    left: 4000px;
+}
+
+#anim2-skinne-88 {
+    left: 4050px;
+}
+
+#anim2-skinne-89 {
+    left: 4100px;
+}
+
+#anim2-skinne-90 {
+    left: 4150px;
+}
+
+#anim2-skinne-91 {
+    left: 4200px;
+}
+
+#anim2-skinne-91 {
+    left: 4250px;
+}
+
+#anim2-skinne-92 {
+    left: 4300px;
+}
+
+#anim2-skinne-93 {
+    left: 4350px;
+}
+
+#anim2-skinne-94 {
+    left: 4400px;
+}
+
+#anim2-steel-line1{
+    height: 15px;
+    width: 100%;
+    top: 170px;
+    left: 0px;
+    position: absolute;
+    z-index: -500;
+    background-color: gray;
+}
+
+#anim2-steel-line2{
+    height: 15px;
+    width: 100%;
+    top: 262px;
+    left: 0px;
+    position: absolute;
+    z-index: -500;
+    background-color: gray;
+}
+
+@keyframes animPersonBlueMoves2 {
+    10% {
+        bottom: 250px;
+        left: 310px;
+    }
+    15% {
+        bottom: 250px;
+        left: 310px;
+    }
+    20% {
+        bottom: 300px;
+        left: 330px;
+    }
+    25% {
+        bottom: 300px;
+        left: 330px;
+    }
+    30% {
+        bottom: 300px;
+        left: 330px;
+    }
+    35% {
+        bottom: 300px;
+        left: 330px;
+    }
+    40% {
+        bottom: 300px;
+        left: 400px;
+    }
+    50% {
+        bottom: 300px;
+        left: 460px;
+    }
+    100% {
+        bottom: 300px;
+        left: 460px;
+    }
+}
+
+@keyframes animPersonRedMoves2 {
+    10% {
+        bottom: 380px;
+        left: 750px;
+    }
+    15% {
+        bottom: 380px;
+        left: 750px;
+    }
+    20% {
+        bottom: 300px;
+        left: 750px;
+    }
+    25% {
+        bottom: 300px;
+        left: 750px;
+    }
+    30% {
+        bottom: 300px;
+        left: 750px;
+    }
+    35% {
+        bottom: 300px;
+        left: 750px;
+    }
+    40% {
+        bottom: 300px;
+        left: 650px;
+    }
+    50% {
+        bottom: 300px;
+        left: 490px
+    }
+    65% {
+        bottom: 300px;
+        left: 490px;
+    }
+    100% {
+        bottom: 300px;
+        left: 490px;
+    }
+}
+
+@keyframes subwayBubblemove1 {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    30% {
+        opacity: 1;
+    }
+    55% {
+        opacity: 0;
+    }
+    100% {
+    }
+}
+
+@keyframes subwayBubblemove1 {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    30% {
+        opacity: 1;
+    }
+    55% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes subwayBubblemove2 {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    30% {
+        opacity: 1;
+    }
+    55% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes subwayBubblemove3 {
+    0% {
+        opacity: 0;
+    }
+    30% {
+        opacity: 0;
+    }
+    58% {
+        opacity: 1;
+    }
+    60% {
+        opacity: 1;
+    }
+    70% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+
+}
+
+@keyframes subwayBubblemove4 {
+    0% {
+        opacity: 0;
+    }
+    30% {
+        opacity: 0;
+    }
+    40% {
+        opacity: 0;
+    }
+    58% {
+        opacity: 1;
+    }
+    60% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes subwayBubblemove5 {
+    0% {
+        opacity: 0;
+    }
+    30% {
+        opacity: 0;
+    }
+    60% {
+        opacity: 0;
+    }
+    85% {
+        opacity: 1;
+    }
+    95% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes chatFloat {
+    0% {}
+    50% {transform: translate(0px,-5px);}
+    100% {}
+}
+
+@keyframes phoneShake {
+    0% {}
+    50% {transform: translate(-3px, 0px);}
+    100% {}
+}
+
+@keyframes waveShake {
+    0% {}
+    50% {transform: rotate(30deg);}
+    100% {}
+}
+
+@keyframes anim2SkinneMoves{
+    0%{
+        left: 0px;
+    }
+    100%{
+        left: -3000px;
+    }
+}
+
+/*------------------------------------------------
+5.5 - Side 3.3 - "Tredje steg"
+------------------------------------------------*/
+/** ANIMASJON 3 **/
+#toolbar {
+    height: 100%;
+    animation: subwayTunnelAnim 2s linear forwards;
+}
+
+#anim-stairs {
+    overflow: hidden;
+}
+
+#subway-tunnel-3 {
+    z-index: 5;
+    position: absolute;
+    animation: metroMoves 4s forwards;
+}
+
+#subway {
+    width: 960px;
+    height: 350px;
+    top: 55px;
+    left: 22px;
+    margin: auto;
+    opacity: 50%;
+    z-index: 5;
+    position: absolute;
+}
+
+#station1 {
+    width: 800px;
+    height: 100px;
+    top: 250px;
+    right: -160px;
+    left: 102px;
+    margin: 0;
+    border-radius: 5px;
+    background-color: #dddddd;
+    position: absolute;
+    z-index: 1000000;
+    animation: railMoves ease-out forwards 4s;
+}
+
+.entrance-marker {
+    height: 15px;
+    width: 5px;
+    top: 0px;
+    background-color: #f1c841;
+    position: absolute;
+    opacity: 0.8;
+}
+
+#entrance-marker1 {
+    left: 87px;
+}
+
+#entrance-marker2 {
+    left: 183px;
+}
+
+#entrance-marker3 {
+    left: 305px;
+}
+
+#entrance-marker4 {
+    left: 402px;
+}
+
+#entrance-marker5 {
+    left: 525px;
+}
+
+#entrance-marker6 {
+    left: 620px;
+}
+
+.bench {
+    width: 50px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: #795548;
+    position: absolute;
+    bottom: 0;
+}
+
+#bench1 {
+    left: 0px;
+}
+
+#bench2 {
+    left: 150px;
+}
+
+#bench3 {
+    left: 300px;
+}
+
+#bench4 {
+    left: 450px;
+}
+
+#bench5 {
+    left: 600px;
+}
+
+.bench-divider {
+    width: 50px;
+    height: 1px;
+    background-color: #000000;
+    position: absolute;
+    bottom: 4px;
+}
+
+.lights {
+    top: 25px;
+    width: 50px;
+    height: 7px;
+    border-radius: 2px;
+    background-color: #fff9c4;
+    position: absolute;
+    filter: drop-shadow(0px 0px 5px #fff9c4);
+}
+
+.lights-bottom {
+    top: 351px !important;
+}
+
+.light-1 {
+    left: -600px;
+}
+
+.light-2 {
+    left: -400px;
+}
+
+.light-3 {
+    left: -200px;
+}
+
+.light-4 {
+    left: 0px;
+}
+
+.light-5 {
+    left: 200px;
+}
+
+.light-6 {
+    left: 400px;
+}
+
+.light-7 {
+    left: 600px;
+}
+
+.light-8 {
+    left: 800px;
+}
+
+.light-9 {
+    left: 1000px;
+}
+
+.light-10 {
+    left: 1200px;
+}
+
+.light-11 {
+    left: 1400px;
+}
+
+.light-12 {
+    left: 1600px;
+}
+
+#subway-entrance {
+    width: 200px;
+    height: 100px;
+    top: 120px;
+    left: 0px;
+    right: 0px;
+    position: absolute;
+    border-style: solid;
+    border-width: 10px;
+    border-color: #25251f;
+    z-index: 50000;
+    overflow: hidden;
+    margin: 0px;
+    transform: rotate(90deg);
+}
+
+#personBlue {
+    background-color: #ff4081;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    z-index: 1000;
+    display: block;
+    position: absolute;
+    top: 225px;
+    left: 490px;
+    animation: personBlueMoves forwards linear 15s;
+    animation-delay: 2s;
+}
+
+#personRed {
+    background-color: #40c4ff;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    z-index: 1000;
+    display: block;
+    position: absolute;
+    top: 225px;
+    left: 455px;
+    animation: personRedMoves forwards linear 15s;
+    animation-delay: 2s;
+}
+
+#tbane1 {
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 450px;
+    width: 700px;
+    position: absolute;
+    z-index: 1000;
+    margin: auto;
+}
+
+#rail-holder {
+    position: relative;
+    width: 100%;
+    height: 150px;
+    top: 150px;
+    animation: railMoves ease-out 4s forwards;
+}
+
+.skinne-properties {
+    position: absolute;
+    width: 20px;
+    height: 150px;
+    background-color: #4e342e;
+}
+
+#skinne-1 {
+    left: -300px;
+}
+
+#skinne-2 {
+    left: -250px;
+}
+
+#skinne-3 {
+    left: -200px;
+}
+
+#skinne-4 {
+    left: -150px;
+}
+
+#skinne-5 {
+    left: -100px;
+}
+
+#skinne-6 {
+    left: -50px;
+}
+
+#skinne-7 {
+    left: 0px;
+}
+
+#skinne-8 {
+    left: 50px;
+}
+
+#skinne-9 {
+    left: 100px;
+}
+
+#skinne-10 {
+    left: 150px;
+}
+
+#skinne-11 {
+    left: 200px;
+}
+
+#skinne-12 {
+    left: 250px;
+}
+
+#skinne-13 {
+    left: 300px;
+}
+
+#skinne-14 {
+    left: 350px;
+}
+
+#skinne-15 {
+    left: 400px;
+}
+
+#skinne-16 {
+    left: 450px;
+}
+
+#skinne-17 {
+    left: 500px;
+}
+
+#skinne-18 {
+    left: 550px;
+}
+
+#skinne-19 {
+    left: 600px;
+}
+
+#skinne-20 {
+    left: 650px;
+}
+
+#skinne-21 {
+    left: 700px;
+}
+
+#skinne-22 {
+    left: 750px;
+}
+
+#skinne-23 {
+    left: 800px;
+}
+
+#skinne-24 {
+    left: 850px;
+}
+
+#skinne-25 {
+    left: 900px;
+}
+
+#skinne-26 {
+    left: 950px;
+}
+
+#skinne-27 {
+    left: 1000px;
+}
+
+#skinne-28 {
+    left: 1050px;
+}
+
+#skinne-29 {
+    left: 1100px;
+}
+
+#skinne-30 {
+    left: 1150px;
+}
+
+#skinne-31 {
+    left: 1200px;
+}
+
+#skinne-32 {
+    left: 1250px;
+}
+
+#skinne-33 {
+    left: 1300px;
+}
+
+#skinne-34 {
+    left: 1350px;
+}
+
+#skinne-35 {
+    left: 1400px;
+}
+
+#skinne-36 {
+    left: 1450px;
+}
+
+#skinne-37 {
+    left: 1500px;
+}
+
+#skinne-38 {
+    left: 1550px;
+}
+
+#skinne-39 {
+    left: 1600px;
+}
+
+#skinne-40 {
+    left: 1650px;
+}
+
+#skinne-41 {
+    left: 1700px;
+}
+
+#skinne-42 {
+    left: 1750px;
+}
+
+#skinne-43 {
+    left: 1800px;
+}
+
+#skinne-44 {
+    left: 1850px;
+}
+
+#skinne-45 {
+    left: 1900px;
+}
+
+#skinne-46 {
+    left: 1950px;
+}
+
+#skinne-47 {
+    left: 2000px;
+}
+
+#skinne-48 {
+    left: 2050px;
+}
+
+#skinne-49 {
+    left: 2100px;
+}
+
+#skinne-50 {
+    left: 2150px;
+}
+
+#skinne-51 {
+    left: 2200px;
+}
+
+#skinne-52 {
+    left: 2250px;
+}
+
+#skinne-53 {
+    left: 2300px;
+}
+
+#skinne-54 {
+    left: 2350px;
+}
+
+#skinne-55 {
+    left: 2400px;
+}
+
+#skinne-56 {
+    left: 2450px;
+}
+
+#skinne-57 {
+    left: 2500px;
+}
+
+#skinne-58 {
+    left: 2550px;
+}
+
+#skinne-59 {
+    left: 2600px;
+}
+
+#skinne-60 {
+    left: 2650px;
+}
+
+#skinne-61 {
+    left: 2700px;
+}
+
+#skinne-62 {
+    left: 2750px;
+}
+
+#skinne-63 {
+    left: 2800px;
+}
+
+#skinne-64 {
+    left: 2850px;
+}
+
+#skinne-65 {
+    left: 2900px;
+}
+
+#skinne-66 {
+    left: 2950px;
+}
+
+#skinne-67 {
+    left: 3000px;
+}
+
+#skinne-68 {
+    left: 3050px;
+}
+
+#skinne-69 {
+    left: 3100px;
+}
+
+#skinne-70 {
+    left: 3150px;
+}
+
+#skinne-71 {
+    left: 3200px;
+}
+
+#skinne-72 {
+    left: 3250px;
+}
+
+#skinne-73 {
+    left: 3300px;
+}
+
+#skinne-74 {
+    left: 3350px;
+}
+
+#skinne-75 {
+    left: 3400px;
+}
+
+#skinne-76 {
+    left: 3450px;
+}
+
+#skinne-77 {
+    left: 3500px;
+}
+
+#skinne-78 {
+    left: 3550px;
+}
+
+#skinne-79 {
+    left: 3600px;
+}
+
+#skinne-80 {
+    left: 3650px;
+}
+
+#skinne-81 {
+    left: 3700px;
+}
+
+#skinne-82 {
+    left: 3750px;
+}
+
+#skinne-83 {
+    left: 3800px;
+}
+
+#skinne-84 {
+    left: 3850px;
+}
+
+#skinne-85 {
+    left: 3900px;
+}
+
+#skinne-86 {
+    left: 3950px;
+}
+
+#skinne-87 {
+    left: 4000px;
+}
+
+#skinne-88 {
+    left: 4050px;
+}
+
+#skinne-89 {
+    left: 4100px;
+}
+
+#skinne-90 {
+    left: 4150px;
+}
+
+#skinne-91 {
+    left: 4200px;
+}
+
+#skinne-91 {
+    left: 4250px;
+}
+
+#skinne-92 {
+    left: 4300px;
+}
+
+#skinne-93 {
+    left: 4350px;
+}
+
+#skinne-94 {
+    left: 4400px;
+}
+
+#steel-line1 {
+    height: 15px;
+    width: 100%;
+    top: 165px;
+    left: 0px;
+    position: absolute;
+    z-index: 100;
+    background-color: #757575;
+}
+
+#steel-line2 {
+    height: 15px;
+    width: 100%;
+    top: 270px;
+    left: 0px;
+    position: absolute;
+    z-index: 100;
+    background-color: #757575;
+}
+
+#entrance {
+    width: 95px;
+    height: 53px;
+    top: 22px;
+    left: 760px;
+    position: absolute;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #25251f;
+    opacity: 100%;
+    z-index: 50000;
+    overflow: hidden;
+    transform: rotate(90deg);
+    animation: railMoves ease 4s forwards;
+}
+
+#entrance-divider1 {
+    height: 70px;
+    width: 3px;
+    background-color: #000000;
+    bottom: 0;
+    left: 59px;
+    position: absolute;
+    z-index: 500000;
+}
+
+#entrance-divider2 {
+    height: 70px;
+    width: 3px;
+    background-color: #000000;
+    bottom: 0;
+    left: 40px;
+    position: absolute;
+    z-index: 50000;
+}
+
+#entrance-divider3 {
+    height: 70px;
+    width: 17px;
+    background-color: #665353;
+    left: 42px;
+    bottom: 0;
+    position: absolute;
+    z-index: 50000;
+}
+
+.stairs-flat {
+    background-color: #646060;
+    width: 43px;
+    height: 10px;
+    position: absolute;
+    z-index: 10000;
+}
+
+#stairs-flat-left1 {
+    bottom: -40px;
+    left: 0;
+}
+
+#stairs-flat-left2 {
+    bottom: -20px;
+    left: 0;
+}
+
+#stairs-flat-left3 {
+    bottom: 0px;
+    left: 0;
+}
+
+#stairs-flat-left4 {
+    bottom: 20px;
+    left: 0;
+}
+
+#stairs-flat-left5 {
+    bottom: 40px;
+    left: 0;
+}
+
+#stairs-flat-left6 {
+    bottom: 60px;
+    left: 0;
+}
+
+#stairs-flat-left7 {
+    bottom: 80px;
+    left: 0;
+}
+
+#stairs-flat-left8 {
+    bottom: 100px;
+    left: 0;
+}
+
+#stairs-flat-right1 {
+    bottom: -40px;
+    left: 63px;
+}
+
+#stairs-flat-right2 {
+    bottom: -20px;
+    left: 63px;
+}
+
+#stairs-flat-right3 {
+    bottom: 0px;
+    left: 63px;
+}
+
+#stairs-flat-right4 {
+    bottom: 20px;
+    left: 63px;
+}
+
+#stairs-flat-right5 {
+    bottom: 40px;
+    left: 63px;
+}
+
+#stairs-flat-right6 {
+    bottom: 60px;
+    left: 63px;
+}
+
+#stairs-flat-right7 {
+    bottom: 80px;
+    left: 63px;
+}
+
+#stairs-flat-right8 {
+    bottom: 100px;
+    left: 63px;
+}
+
+.stairs-up {
+    background-color: #383232;
+    width: 48px;
+    height: 12px;
+    left: 0;
+    position: absolute;
+    z-index: 10000;
+}
+
+#stairs-up-left1 {
+    bottom: -30px;
+}
+
+#stairs-up-left2 {
+    bottom: -10px;
+}
+
+#stairs-up-left3 {
+    bottom: 10px;
+}
+
+#stairs-up-left4 {
+    bottom: 30px;
+}
+
+#stairs-up-left5 {
+    bottom: 50px;
+}
+
+#stairs-up-left6 {
+    bottom: 70px;
+}
+
+#stairs-up-left7 {
+    bottom: 90px;
+}
+
+#stairs-up-left8 {
+    bottom: 110px;
+}
+
+#stairs-up-right1 {
+    bottom: -30px;
+    left: 63px;
+}
+
+#stairs-up-right2 {
+    bottom: -10px;
+    left: 63px;
+}
+
+#stairs-up-right3 {
+    bottom: 10px;
+    left: 63px;
+}
+
+#stairs-up-right4 {
+    bottom: 30px;
+    left: 63px;
+}
+
+#stairs-up-right5 {
+    bottom: 50px;
+    left: 63px;
+}
+
+#stairs-up-right6 {
+    bottom: 70px;
+    left: 63px;
+}
+
+#stairs-up-right7 {
+    bottom: 90px;
+    left: 63px;
+}
+
+#stairs-up-right8 {
+    bottom: 110px;
+    left: 63px;
+}
+
+#anim-stairs-left {
+    animation: stairsLeftMoves linear 6s infinite;
+    position: absolute;
+    z-index: 10;
+    bottom: 0;
+}
+
+#anim-stairs-right {
+    animation: stairsRightMoves linear 6s infinite;
+    position: absolute;
+    z-index: 10;
+    bottom: 0;
+    left: -2px;
+    width: 30px;
+}
+
+@keyframes railMoves {
+	0% {
+		right: -320px;
+  }
+  100% {
+    right: 200px;
+  }
+}
+
+@keyframes personBlueMoves {
+  0% {
+    top: 225px;
+    left: 490px;
+  }
+  25% {
+    top: 280px;
+    left: 480px;
+  }
+  50% {
+    top:355px;
+    left: 600px;
+  }
+  75% {
+    top: 370px;
+    left: 880px;
+  }
+  100% {
+    top: 370px;
+    left: 960px;
+  }
+}
+
+@keyframes personRedMoves {
+  0% {
+    top: 225px;
+    left: 455px;
+  }
+  25% {
+    top: 280px;
+    left: 465px;
+  }
+  50% {
+    top:370px;
+    left: 600px;
+  }
+  75% {
+    top: 385px;
+    left: 880px;
+  }
+  100% {
+    top: 385px;
+    left: 960px;
+  }
+}
+
+@keyframes stairsLeftMoves {
+  0% {
+    bottom: 40px;
+  }
+  100% {
+      bottom: -60px;
+  }
+}
+
+@keyframes stairsRightMoves {
+  0% {
+    bottom: -60px;
+  }
+  100% {
+    bottom: 40px;
+  }
+}
+
+@keyframes metroMoves {
+	0% {
+		left: 4000px;
+  }
+  100% {
+    left: 0px;
+  }
+}
+
+@keyframes subwayTunnelAnim {
+  0% {
+  	background-color: #dddddd;
+	}
+  10.0% {
+  	background-color:#635656;
+	}
+	100.0% {
+		background-color:#212121;
+	}
+}
+
+/*------------------------------------------------
+6.0 - Side 4 - "Pindlers Liste"
+------------------------------------------------*/
+#metrobox {
+  position: absolute;
+  right: 0;
+  width:960px;
+  height:400px;
+  background-image: url(images/subway-map.png);
+}
+
+#metrobox h1 {
+	font-size: 40px;
+	color: #ffca28;
+	text-align: center;
+}
+
+#metrobox p {
+	color: #fff;
+	font-family: 'Roboto Slab', serif;
+}
+
+#metromap {
+  width: 330px;
+  height: 315px;
+}
+
+.heart {
+  position: absolute;
+  opacity: 0.7;
+  text-align: center;
+  font-size: 17px;
+  font-family: 'Roboto Slab', serif;
+  background-image: url(images/PindlrsHeart.png);
+  background-size: contain;
+  animation: movingHeart 1.5s infinite;
+}
+#heart1 {
+  top: 10px;
+  left: 25px;
+  height: 100px;
+  width: 100px;
+  line-height: 50px;
+}
+#heart2 {
+  top: 40px;
+  right: 100px;
+  height: 130px;
+  width: 130px;
+  line-height: 90px;
+}
+#heart3 {
+  bottom: -30px;
+  right: 50px;
+  height: 160px;
+  width: 160px;
+  line-height: 110px;
+}
+#heart4 {
+  bottom: 170px;
+  left: 290px;
+  height: 190px;
+  width: 190px;
+  line-height: 130px;
+}
+#heart5 {
+  bottom: -60px;
+  left: 100px;
+  height: 220px;
+  width: 220px;
+  line-height: 150px;
+}
+#heart6 {
+  bottom: -20px;
+  right: 250px;
+  height: 250px;
+  width: 250px;
+  line-height: 170px;
+}
+.match {
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0px;
+  opacity: 0;
+  font-size: 50px;
+  color: #212121;
+  font-family: 'Roboto Slab', serif;
+}
+#heart1:hover ~ #match1 {
+  animation: matchInvis 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+#heart2:hover ~ #match2 {
+  animation: matchInvis 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+#heart3:hover ~ #match3 {
+  animation: matchInvis 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+#heart4:hover ~ #match4 {
+	animation: matchInvis 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+#heart5:hover ~ #match5 {
+  animation: matchInvis 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+#heart6:hover ~ #match6 {
+  animation: matchInvis 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes movingHeart {
+	0% {
+
+	}
+	50% {
+		transform: scale(1.4,1.4);
+	}
+	100% {
+
+	}
+}
+
+@keyframes matchInvis {
+	from {
+	    opacity: 0;
+	}
+	to {
+	    opacity: 1;
+	}
+}
+
+/*------------------------------------------------
+7.0 - Side 5 - "Anbefalinger"
+------------------------------------------------*/
+#recommendations-wrapper {
+  position: absolute;
+	padding-top: 20px;
+  width: 960px;
+  height: 400px;
+  font-size: 0; /*Fjern mellomrom mellom inline-block elementer i containeren*/
+  text-align: center;
+}
+
+.rec-container {
+  display: inline-block;
+  margin: auto;
+  padding: 25px;
+  padding-top: 30px;
+  width: 187.5px;
+  height: 350px;
+  overflow: hidden;
+  border-width: 0 2px 0 0;
+  border-style: solid;
+  border-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 10%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0) 90%) 1;
+}
+
+.rec-container:first-child {
+  border-left: 2px;
+  border-style: solid;
+  border-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 10%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0) 90%) 1;
+}
+
+.rec-container h3 {
+	color: #ffffff;
+}
+
+.rec-container p {
+	font-size: 18px;
+	color: #ffffff;
+}
+.rec-img {
+  margin: auto;
+  width: 120px;
+  height: 120px;
+  transform: translateY(30px);
+  border: 8px solid #ffffff;
+  border-radius: 50%;
+  transition: 0.5s;
+}
+
+.rec-name {
+  margin-top: 20px;
+  font-size: 20px;
+  transform: translateY(30px);
+  transition: 0.5s;
+}
+
+.rec-text {
+  margin-top: 20px;
+  bottom: 0;
+  transform: translateY(50px);
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.rec-container:hover * {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/*------------------------------------------------
+8.0 - Side 6 - "Om oss"
+------------------------------------------------*/
+.timeline {
+    position: relative;
+    width: 960px;
+    height: 550px;
+}
+
+.timeline h3 {
+	color: #666666;
+}
+
+#scene-scroll {
+ 	position: absolute;
+    width: 960px;
+    height: 340px;
+    margin-top: 40px;
+    overflow: scroll;
+}
+
+#timeline-content-left {
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 400px;
+}
+
+#timeline-content-right {
+    position: absolute;
+    right: 0;
+    height: 100%;
+    width: 400px;
+}
+
+.timeline-box-left {
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    color: #000;
+    left: 20px;
+}
+
+#timeline-box-l-1 {
+    top: 20px;
+}
+
+#timeline-box-l-2 {
+    top: 550px;
+}
+
+#timeline-box-l-3 {
+    top: 1050px;
+}
+
+.timeline-box-right {
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    color: #000;
+}
+
+#timeline-box-r-1 {
+    top: 300px;
+    right: 20px;
+}
+
+#timeline-box-r-2 {
+    top: 800px;
+    right: 20px;
+}
+
+#timeline-box-r-3 {
+    top: 1300px;
+    right: 20px;
+}
+
+#about-train {
+    position: relative;
+    width: 35px;
+    height: 200px;
+    z-index: 21;
+    background-image: url(images/subway-vertical.png);
+    left: 463px;
+    top: 80px;
+}
+
+#about-track-line {
+	position: absolute;
+	margin: auto;
+	left: 0;
+	right: 0;
+	width: 12px;
+	height: 920px;
+	background-color: #29b6f6;
+}
+
+#about-track-dot-1 {
+	top: 140px;
+	left: -3px;
+	right: 0;
+}
+
+#about-track-dot-2 {
+	top: 400px;
+	left: -3px;
+	right: 0;
+}
+
+#about-track-dot-3 {
+	top: 650px;
+	left: -3px;
+	right: 0;
+}
+
+#about-track-dot-4 {
+	top: 910px;
+	left: -3px;
+	right: 0;
+}
+
+#about-track-dot-5 {
+	top: 1150px;
+	left: -3px;
+	right: 0;
+}
+
+#about-track-dot-6 {
+	top: 1400px;
+	left: -3px;
+	right: 0;
+}
+
+#about-track-container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 35px;
+    height: 800px;
+}
+
+#about-track-1 {
+    position: absolute;
+    background-color: #ff00cc;
+    left: 10px;
+    width: 2px;
+    z-index: 20;
+    height: 2000px;
+    background-color: #000;
+}
+
+#about-track-2 {
+    position: absolute;
+    width: 2px;
+    height: 2000px;
+    background-color: #000;
+    right: 10px;
+    z-index: 20;
+}
+
+.wood-tracks {
+    position: absolute;
+    width: 33px;
+    height: 5px;
+    background-color: #333333;
+    z-index: 19;
+}
+
+#wood-track-1 {
+    top: 10px;
+}
+
+#wood-track-2 {
+    top: 40px;
+}
+
+#wood-track-3 {
+    top: 70px;
+}
+
+#wood-track-4 {
+    top: 100px;
+}
+
+#wood-track-5 {
+    top: 130px;
+}
+
+#wood-track-6 {
+    top: 160px;
+}
+
+#wood-track-7 {
+    top: 190px;
+}
+
+#wood-track-8 {
+    top: 220px;
+}
+
+#wood-track-9 {
+    top: 250px;
+}
+
+#wood-track-10 {
+    top: 280px;
+}
+
+#wood-track-11 {
+    top: 310px;
+}
+
+/*------------------------------------------------
+9.0 - Side 7 - "Call to action" / App-nedlasting
+------------------------------------------------*/
+#app-page-info-block {
+    position: relative;
+    left: 0;
+    width: 210px;
+    height: 340px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 30px;
+    animation: infoBlockSlide 2s linear forwards;
+}
+
+@keyframes infoBlockSlide {
+    0% {
+        left: -700px;
+    }
+    100% {
+        left: 0px;
+    }
+}
+
+#app-page-mobile {
+    position: relative;
+    left: 300px;
+    top: -400px;
+    width: 220px;
+    height: 400px;
+    background-color: #212121;
+    border-radius: 20px;
+    animation: infoMobileSlide 3s linear forwards;
+}
+
+@keyframes infoMobileSlide {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+#app-page-info-block h1 {
+    font-family: 'Roboto Slab', serif;
+    margin: 0;
+    padding: 0;
+}
+
+#app-page-info-block a {
+    color: #ec407a;
+}
+
+#app-page-info-block a:hover {
+    color: #ffd740;
+}
+
+#app-page-mobile-speaker {
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 15px;
+    width: 50px;
+    height: 10px;
+    border-radius: 10px;
+    background: #666666;
+    z-index: 100;
+}
+
+#mobil-scene {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 520px;
+    height: 400px;
+}
+
+#mobil-menu ol {
+    color: #666666;
+}
+
+#app-images {
+    position: absolute;
+    top: 40px;
+    left: 10px;
+    width: 200px;
+    height: 320px;
+    background: url(images/mobil-1.png);
+    background-size: cover;
+    z-index: 5;
+}
+
+#app-images img {
+    width: 200px;
+}
+
+#mobile-start1 {
+    position: absolute;
+    top: 0;
+    z-index: 2;
+}
+
+#mobileprofile, #mobileroute, #mobilematch {
+    display: none;
+    z-index: 5;
+}
+
+#mobileprofile:target {
+    display: inline;
+    height: auto;
+}
+
+#mobileroute:target {
+    display: inline;
+}
+
+#mobilematch:target {
+    display: inline;
+}
+
+/* END ANIMATIONS */
+
+#anim-container {
+	position: relative;
+	margin-top: 20px;
+	left: 0;
+	right: 0;
+	width: 960px;
+	height: 650px;
+	background-color: #FFDEE9;
+	background-image: linear-gradient(0deg, #FFDEE9 0%, #B5FFFC 100%);
+	border-radius: 20px;
+	overflow: hidden;
+	z-index: 5;
+}
+
+#subway-tunnel-container {
+	position: absolute;
+	width: 960px;
+	height: 650px;
+	background-color: #000000;
+	z-index: 6;
+	overflow: hidden;
+	animation: subwayTunnelContAnim .4s linear forwards;
+	animation-delay: 5s;
+}
+
+@keyframes subwayTunnelContAnim {
+	0% {
+	top: 0px;
+	right: 0px;
+	}
+	100% {
+	top: 370px;
+	right: -960px;
+	}
+}
+
+#subway-tunnel {
+	position: absolute;
+	width: 1200px;
+	height: 200px;
+	background-color: #666666;
+	transform: rotate(20deg);
+	top: 220px;
+	left: -100px;
+	z-index: 6;
+}
+
+#subway-tunnel-tracks {
+	position: absolute;
+	bottom: 0;
+	width: 1200px;
+	height: 25px;
+	background-color: #333333;
+	z-index: 7;
+}
+
+#subway-stuff-container {
+	position: absolute;
+	width: 960px;
+	height: 650px;
+	z-index: 100;
+	animation: subwayTunnelContAnim .5s linear forwards;
+	animation-delay: 5s;
+	overflow: hidden;
+}
+
+#subway-tunnel-stuff {
+	position: absolute;
+	width: 50px;
+	height: 300px;
+	background-color: #000000;
+	z-index: 100;
+	animation: subwayStuffAnim 1s linear infinite;
+	transform: rotate(20deg);
+}
+
+#subway-tunnel-stuff-2 {
+	position: absolute;
+	width: 60px;
+	height: 200px;
+	background-color: #444444;
+	z-index: 100;
+	animation: subwayStuffAnim2 1.5s linear infinite;
+	z-index: 6;
+}
+
+#subway-train-shake {
+	position: absolute;
+	animation: cloudShake1 2s ease infinite;
+	animation-delay: 30s;
+}
+
+#sun {
+	position: absolute;
+	top: -100px;
+	right: 50px;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	background-color: #fff5cc;
+	z-index: 10;
+	animation: sunMove 40s ease forwards;
+	animation-delay: 6s;
+}
+
+#animation-heart {
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: auto;
+	width: 340px;
+	height: 340px;
+	background-image: url(images/heart-1.svg);
+	animation: animationHeartMove 6s ease forwards;
+	animation-delay: 20s;
+	opacity: 0;
+}
+
+#mountain {
+	position: absolute;
+	width: 1200px;
+	height: 500px;
+	background-image: url(images/mountain-1.png);
+	animation: mountainMove 3s linear forwards;
+	animation-delay: 5s;
+}
+
+@keyframes mountainMove {
+	0% {
+		top: 150px;
+		right: 0;
+	}
+	100% {
+		top: 1000px;
+		right: -500px;
+	}
+}
+
+@keyframes animationHeartMove {
+	0% {
+	opacity: 0;
+	bottom: -400px;
+	}
+	100% {
+	opacity: 1;
+	bottom: 200px;
+	}
+}
+
+@keyframes sunMove {
+	0% {
+	top: -100px;
+	}
+	100% {
+	top: 380px;
+	}
+}
+
+@keyframes subwayStuffAnim {
+	0% {
+		top: 20px;
+		left: 0px;
+	}
+	100% {
+		top: 450px;
+		left: 1100px;
+	}
+}
+
+@keyframes subwayStuffAnim2 {
+	0% {
+		left: 0px;
+	}
+	100% {
+		left: 1100px;
+	}
+}
+
+#subway-tunnel-lights {
+	position: absolute;
+	width: 100px;
+	height: 10px;
+	background-color: #fbffcb;
+	animation: subwayLightsAnim .5s linear infinite;
+	z-index: 7;
+}
+
+@keyframes subwayLightsAnim {
+	0% {
+		left: 0px;
+	}
+	100% {
+		left: 1100px;
+	}
+}
+
+#subway-train-box {
+	position: absolute;
+	top: 200px;
+	left: 100px;
+	width: 800px;
+	height: 150px;
+	background-image: url(images/subway-5.png);
+	background-size: contain;
+	z-index: 50;
+}
+
+#subway-train-in-tunnel {
+	position: absolute;
+	transform: rotate(20deg);
+	top: -150px;
+	z-index: 50;
+	animation: subwayInTunnelAnim 3s forwards;
+}
+
+#subway-train-in-air {
+	position: absolute;
+	animation: subwayInAirAnim 6s linear forwards;
+	animation-delay: 15s;
+	z-index: 100;
+}
+
+@keyframes subwayInAirAnim {
+	0% {
+		top: 0;
+		left: 0;
+		transform: rotate(0deg);
+	}
+	50% {
+		transform: rotate(-20deg);
+		transform-origin: bottom left;
+	}
+	100% {
+		top: 280px;
+		left: -100px;
+		transform: rotate(-20deg);
+	}
+}
+
+#subway-train-in-air-2 {
+	position: absolute;
+	animation: subwayInAirAnim2 20s linear infinite;
+	animation-delay: 6s;
+	z-index: 100;
+}
+
+@keyframes subwayInAirAnim2 {
+	0% {
+		top: 0px;
+	}
+	10% {
+		top: 20px;
+	}
+		20% {
+		top: 0px;
+	}
+	30% {
+		top: 20px;
+	}
+	40% {
+		top: 0px;
+	}
+	50% {
+		top: 20px;
+	}
+		60% {
+		top: 0px;
+	}
+	70% {
+		top: 20px;
+	}
+		80% {
+		top: 0px;
+	}
+	90% {
+		top: 20px;
+	}
+	100% {
+		top: 0px;
+	}
+}
+
+@keyframes subwayInTunnelAnim {
+	0% {
+		top: 220px;
+		left: 1000px;
+	}
+	100% {
+		top: -110px;
+		left: 120px;
+	}
+}
+
+@keyframes subwayRotateLanding {
+	0% {
+		transform: rotate(10deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}
+
+.poff-cloud {
+	position: absolute;
+	background-image: url(images/poff.png);
+	background-size: contain;
+	z-index: 200;
+}
+
+#poff-cloud-1 {
+	top: 390px;
+	right: 0;
+	width: 100px;
+	height: 100px;
+	animation: poofCloudMove1 2s ease forwards;
+	animation-delay: 5s;
+	opacity: 0;
+}
+
+@keyframes poofCloudMove1 {
+	0% {
+		opacity: 1;
+		top: 390px;
+	}
+	100% {
+		opacity: 0;
+		top: 600px;
+	}
+}
+
+#poff-cloud-2 {
+	top: 390px;
+	right: 0;
+	width: 150px;
+	height: 150px;
+	animation: poofCloudMove2 2s ease forwards;
+	animation-delay: 5s;
+	opacity: 0;
+}
+
+@keyframes poofCloudMove2 {
+	0% {
+		opacity: 1;
+		top: 390px;
+	}
+	100% {
+		opacity: 0;
+		top: 250px;
+	}
+}
+
+#poff-cloud-3 {
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	top: 390px;
+	right: 0;
+	z-index: 300;
+	animation: poofCloudMove3 2s ease forwards;
+	animation-delay: 5s;
+	opacity: 0;
+}
+
+@keyframes poofCloudMove3 {
+	0% {
+		opacity: 1;
+		top: 390px;
+	}
+	100% {
+		opacity: 0;
+		top: 100px;
+	}
+}
+
+.clouds {
+	position: absolute;
+	top: -100px;
+}
+#cloud-1 {
+	width: 198px;
+	height: 65px;
+	animation: cloudAnim1 3s linear infinite;
+	animation-delay: 6s;
+	z-index: 99;
+	background-image: url(images/cloud-1.png);
+}
+
+#cloud-2 {
+	width: 223px;
+	height: 76px;
+	animation: cloudAnim2 2s linear infinite;
+	animation-delay: 6s;
+	left: 400px;
+	background-image: url(images/cloud-4.png);
+	z-index: 99;
+}
+
+#cloud-3 {
+	width: 240px;
+	height: 66px;
+	animation: cloud-3-anim 2s linear infinite;
+	animation-delay: 6s;
+	left: 500px;
+	background-image: url(images/cloud-3.png);
+}
+
+.cloud-fade {
+	animation: cloudFadeMove 5s linear forwards;
+	animation-delay: 8s;
+	opacity: 1;
+}
+
+.big-clouds {
+	position: absolute;
+	top: -300px;
+}
+
+#big-cloud-1 {
+	width: 955px;
+	height: 148px;
+	background-image: url(images/cloud-big-pink-2.png);
+	animation: bigCloudAnim 10s linear forwards;
+	animation-delay: 10s;
+	z-index: 100;
+}
+
+#big-cloud-2 {
+	top: -300px;
+	width: 962px;
+	height: 288px;
+	background-image: url(images/cloud-big-pink.png);
+	animation: bigCloudAnim2 10s linear forwards;
+	animation-delay: 10s;
+	z-index: 100;
+}
+
+.cloud-shake {
+	position: absolute;
+	animation: cloudShake1 5s ease infinite;
+	animation-delay: 23s;
+}
+
+@keyframes cloudShake1 {
+	0% {
+	top: 0px;
+	}
+	50% {
+	top: 10px;
+	}
+	100% {
+	top: 0px;
+	}
+}
+
+@keyframes cloudFadeMove {
+	0% {
+	opacity: 1;
+	}
+	100% {
+	opacity: 0;
+	}
+}
+
+@keyframes bigCloudAnim2 {
+	0% {
+        left: -300px;
+	top: -300px;
+	}
+	100% {
+        left: 0;
+	top: 250px;
+	}
+}
+
+@keyframes bigCloudAnim {
+	0% {
+        left: -200px;
+	top: -300px;
+	}
+	100% {
+        left: 0;
+	top: 385px;
+	}
+}
+
+@keyframes cloudAnim1 {
+	0% {
+		top: -100px;
+	}
+	100% {
+		top: 850px;
+	}
+}
+
+@keyframes cloudAnim2 {
+	0% {
+		top: -100px;
+	}
+	100% {
+		top: 700px;
+	}
+}
+
+@keyframes cloudAnim3 {
+	0% {
+		top: -100px;
+		z-index: 110;
+	}
+	100% {
+		top: 600px;
+		z-index: 110;
+	}
+}
+
+#overlay-scene {
+	position: absolute;
+	width: 960px;
+	height: 650px;
+	background-color: #ec407a;
+	opacity: 0;
+	animation: overlaySceneEnable 3s linear forwards;
+	animation-delay: 25s;
+	z-index: 10000;
+}
+
+#overlay-scene h2 {
+	position: absolute;
+	top: 100px;
+	margin: 0;
+	padding: 0;
+	left: 0;
+	right: 0;
+	color: #ffffff;
+	font-family: 'Roboto Slab', serif;
+	font-size: 75px;
+	text-align: center;
+	z-index: 1500;
+}
+
+@keyframes overlaySceneEnable {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.badge {
+	position: absolute;
+	background-size: contain;
+	z-index: 90000;
+}
+
+#app-store {
+	background-image: url(images/app-store.png);
+	background-repeat: no-repeat;
+	left: 200px;
+	width: 200px;
+	height: 69px;
+	top: 290px;
+}
+
+#play-store{
+	background-image: url(images/play-store.png);
+	top: 300px;
+	right: 200px;
+	width: 200px;
+	height: 59px;
+}
