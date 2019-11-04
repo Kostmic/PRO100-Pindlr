@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 960 220" style="enable-background:new 0 0 960 220;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#424242;}
+	.st1{fill:#333333;}
+	.st2{fill:#BBBBBB;}
+	.st3{fill:#9E9E9E;}
+	.st4{fill:#EF5350;}
+	.st5{fill:#212121;}
+</style>
+<g id="Layer_1">
+	<path class="st0" d="M945,220H15c-8.2,0-15-6.8-15-15V15C0,6.8,6.8,0,15,0h930c8.2,0,15,6.8,15,15v190C960,213.2,953.2,220,945,220
+		z"/>
+	<rect x="115" y="210" class="st1" width="130" height="10"/>
+	<rect x="715" y="210" class="st1" width="130" height="10"/>
+	<rect x="415" y="210" class="st1" width="130" height="10"/>
+	<rect x="115" class="st1" width="130" height="10"/>
+	<rect x="715" y="0" class="st1" width="130" height="10"/>
+	<rect x="415" y="0" class="st1" width="130" height="10"/>
+</g>
+<g id="tbane_structure">
+	<path class="st2" d="M940,215H20c-8.2,0-15-6.8-15-15V20c0-8.2,6.8-15,15-15h920c8.2,0,15,6.8,15,15v180
+		C955,208.2,948.2,215,940,215z"/>
+</g>
+<g id="elements">
+	<path class="st3" d="M115,50L115,50c-1.4,0-2.5-1.1-2.5-2.5V0h5v47.5C117.5,48.9,116.4,50,115,50z"/>
+	<path class="st3" d="M245,50L245,50c-1.4,0-2.5-1.1-2.5-2.5V0h5v47.5C247.5,48.9,246.4,50,245,50z"/>
+	<path class="st3" d="M415,50L415,50c-1.4,0-2.5-1.1-2.5-2.5V0h5v47.5C417.5,48.9,416.4,50,415,50z"/>
+	<path class="st3" d="M545,50L545,50c-1.4,0-2.5-1.1-2.5-2.5V0h5v47.5C547.5,48.9,546.4,50,545,50z"/>
+	<path class="st3" d="M715,50L715,50c-1.4,0-2.5-1.1-2.5-2.5V0h5v47.5C717.5,48.9,716.4,50,715,50z"/>
+	<path class="st3" d="M845,50L845,50c-1.4,0-2.5-1.1-2.5-2.5V0h5v47.5C847.5,48.9,846.4,50,845,50z"/>
+	<path class="st3" d="M117.5,220h-5v-47.5c0-1.4,1.1-2.5,2.5-2.5l0,0c1.4,0,2.5,1.1,2.5,2.5V220z"/>
+	<path class="st3" d="M247.5,220h-5v-47.5c0-1.4,1.1-2.5,2.5-2.5l0,0c1.4,0,2.5,1.1,2.5,2.5V220z"/>
+	<path class="st3" d="M417.5,220h-5v-47.5c0-1.4,1.1-2.5,2.5-2.5l0,0c1.4,0,2.5,1.1,2.5,2.5V220z"/>
+	<path class="st3" d="M547.5,220h-5v-47.5c0-1.4,1.1-2.5,2.5-2.5l0,0c1.4,0,2.5,1.1,2.5,2.5V220z"/>
+	<path class="st3" d="M717.5,220h-5v-47.5c0-1.4,1.1-2.5,2.5-2.5l0,0c1.4,0,2.5,1.1,2.5,2.5V220z"/>
+	<path class="st3" d="M847.5,220h-5v-47.5c0-1.4,1.1-2.5,2.5-2.5l0,0c1.4,0,2.5,1.1,2.5,2.5V220z"/>
+	<circle class="st3" cx="179.6" cy="110.3" r="5"/>
+	<circle class="st3" cx="484.6" cy="110.3" r="5"/>
+	<circle class="st3" cx="784.6" cy="110.3" r="5"/>
+</g>
+<g id="seats">
+	<rect x="247.5" y="5" class="st4" width="165" height="32.6"/>
+	<rect x="247.5" y="183.7" class="st4" width="165" height="32.6"/>
+	<rect x="547.5" y="5" class="st4" width="165" height="32.6"/>
+	<rect x="547.5" y="182.4" class="st4" width="165" height="32.6"/>
+	<path class="st4" d="M112.5,37.6H5V20.1C5,11.7,11.7,5,20.1,5h92.4V37.6z"/>
+	<path class="st4" d="M847.5,37.6H955V20.1c0-8.3-6.7-15.1-15.1-15.1h-92.4V37.6z"/>
+	<path class="st4" d="M847.5,182.4H955v17.6c0,8.3-6.7,15.1-15.1,15.1h-92.4V182.4z"/>
+	<path class="st4" d="M112.5,182.4H5v17.6c0,8.3,6.7,15.1,15.1,15.1h92.4V182.4z"/>
+	<path class="st5" d="M7.5,149.4h-5c-1.4,0-2.5-1.1-2.5-2.5l0-75c0-1.4,1.1-2.5,2.5-2.5h5c1.4,0,2.5,1.1,2.5,2.5v75
+		C10,148.2,8.9,149.4,7.5,149.4z"/>
+	<path class="st5" d="M957.5,150h-5c-1.4,0-2.5-1.1-2.5-2.5v-75c0-1.4,1.1-2.5,2.5-2.5h5c1.4,0,2.5,1.1,2.5,2.5v75
+		C960,148.9,958.9,150,957.5,150z"/>
+</g>
+</svg>
